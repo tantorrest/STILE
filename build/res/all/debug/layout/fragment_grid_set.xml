@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="100">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight="15"
+            android:layout_height="0dp"
+            android:weightSum="2">
+        <TextView
+                android:text="@string/center_colors"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+        </TextView>
+        <LinearLayout
+                android:id="@+id/center_colors"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15">
+        <TextView
+                android:text="@string/border_colors"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+        </TextView>
+        <LinearLayout
+                android:id="@+id/border_colors"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+            android:id="@+id/gridframe"
+            android:layout_width="match_parent"
+            android:layout_weight="70"
+            android:layout_height="0dp">
+        <TableLayout
+                android:id="@+id/grid"
+                android:gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:stretchColumns="true"
+                android:shrinkColumns="true">
+        </TableLayout>
+        <LinearLayout
+                android:id="@+id/row_buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/grid"
+                android:layout_alignTop="@+id/grid"
+                android:layout_alignBottom="@+id/grid"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/col_buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/grid"
+                android:layout_alignLeft="@+id/grid"
+                android:layout_alignRight="@+id/grid"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+        </LinearLayout>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/button"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:visibility="invisible"
+                android:enabled="false"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_grid_set.xml -->

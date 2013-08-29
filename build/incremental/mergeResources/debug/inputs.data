@@ -1,0 +1,25 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1376960112000 254 25b6404e44acb50c82590049639d4fb5fefbac8e /home/tony/workspace/StileProject/Stile/src/main/res/values-sw720dp-land/dimens.xml
+1377396307000 477 8f054428956d5b65e98f3ce68c4595057e5713d1 /home/tony/workspace/StileProject/Stile/src/main/res/values/strings.xml
+1376964498000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /home/tony/workspace/StileProject/Stile/src/main/res/menu/line_choice.xml
+1377666430000 3709 2200809ceaf7fd77b12353c7d634b2b4fb709e48 /home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_grid_set.xml
+1376960112000 211 4e1904afba59d31e5cd6133f6a4c360fa9a5913f /home/tony/workspace/StileProject/Stile/src/main/res/values/dimens.xml
+1373898776000 5237 7761bceaf18ed25cdba5f34bf00a55616d078acf /home/tony/workspace/StileProject/Stile/src/main/res/drawable-mdpi/ic_launcher.png
+1377386306000 889 cbd1fd03d5978ea298c0ca3c0719bca6dc64f36c /home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_lines_set.xml
+1376962735000 276 8bd4971e9c274fe97e373bcf5f1a56dd04e41835 /home/tony/workspace/StileProject/Stile/src/main/res/layout/activity_create.xml
+1376960112000 324 aa1f5f1723de9aee2669dc44a26fbc0ce776d35f /home/tony/workspace/StileProject/Stile/src/main/res/values-v11/styles.xml
+1376960112000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /home/tony/workspace/StileProject/Stile/src/main/res/menu/start.xml
+1376960473000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /home/tony/workspace/StileProject/Stile/src/main/res/menu/create.xml
+1376960112000 181 84de2797380184d8b39af6f829afb092fb956173 /home/tony/workspace/StileProject/Stile/src/main/res/values-sw600dp/dimens.xml
+1376960338000 778 cf3331b83b40a51067d035339b7f8bbdbd8db9db /home/tony/workspace/StileProject/Stile/src/main/res/layout/activity_start.xml
+1376960112000 381 b129b276e01126de5b3b753572ac67cbfc19454c /home/tony/workspace/StileProject/Stile/src/main/res/values-v14/styles.xml
+1377386641000 2363 6ff811a70c41c77d73ad2ef32a8ddc98308bf947 /home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_set_lines.xml
+1377669741000 591 ca744cf55a58e8d9d45568a4187ab568772036a9 /home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_board.xml
+1373898776000 9397 4a5a9affbb731f195fc18fea78d51be7db7536a2 /home/tony/workspace/StileProject/Stile/src/main/res/drawable-hdpi/ic_launcher.png
+1376960112000 680 c76f4caaa7a8dfe9727fa93001b3aee3b22d6716 /home/tony/workspace/StileProject/Stile/src/main/res/values/styles.xml
+1377756872000 2976 0c3cf3419aeb0e41d79568da7364f9136b8ab9f8 /home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_color_choice.xml
+1377667817000 239 62727eb9fb0914af533288e8f184d78a1c181576 /home/tony/workspace/StileProject/Stile/src/main/res/drawable-hdpi/tile.xml
+1376965061000 2688 11af776ac35cb460afe33876d0b4222a6c84b8ca /home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_line_choice.xml
+1373898776000 14383 82acdd75e3fcc36026109406625edc69d4d7212d /home/tony/workspace/StileProject/Stile/src/main/res/drawable-xhdpi/ic_launcher.png
