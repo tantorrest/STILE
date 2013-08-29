@@ -1,6 +1,7 @@
 package com.tantorrest.Stile;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.widget.Button;
 
@@ -70,10 +71,24 @@ public class TileButton extends Button {
     }
 
 
-    public void setAppearance(BorderColor border, CenterColor center) {
-        GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[] {center.getColor(), center.getColor()});
+    public void changeAppearance(BorderColor border, CenterColor center) {
+        GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.TL_BR, new int[] {Color.WHITE, center.getColor()});
         gd.setStroke(10, border.getColor());
         this.setBackground(gd);
     }
+
+    public void setAppearance(BorderColor border, CenterColor center) {
+        setBorderColor(border);
+        setCenterColor(center);
+        GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.TL_BR, new int[] {Color.WHITE, center.getColor()});
+        gd.setStroke(10, border.getColor());
+        this.setBackground(gd);
+    }
+
+    public void setAppearance(){
+        changeAppearance(getBorderColor(), getCenterColor());
+    }
+
+
 
 }

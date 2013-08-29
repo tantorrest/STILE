@@ -108,6 +108,12 @@ public class SetLineFragment extends Fragment {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                for (int i=0; i<borderColors.size(); i++) {
+                    Log.d("BORDERCOLORFUL", "Color ROW IDS:" + borders.get(i).getRows());
+                }
+                for (int i=0; i<borderColors.size(); i++) {
+                    Log.d("BORDERCOLORFUL", "Color COL IDS:" + centers.get(i).getCols());
+                }
                 mCallbacks.generateBoard(borders, centers);
             }
         });

@@ -2,13 +2,16 @@ package com.tantorrest.Stile;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.ClipData;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -75,10 +78,13 @@ public class BoardFragment extends Fragment {
                 btn.setEnabled(true);
                 btn.setRowId(row);
                 btn.setColId(column);
+                btn.setOnTouchListener(new MyTouchListener());
+                btn.setOnDragListener(new MyDragListener());
 //                btn.setText("R"+row+"C"+column);
 //                btn.setVisibility(View.VISIBLE);
                 btn.setLayoutParams(new TableRow.LayoutParams(gridSize/(colors.size()*lines), gridSize/(colors.size()*lines), 1));
 //                setRandomAppearance(btn);
+                Log.d("COLORFUL", "#" + row + "" + column + " Border: " + btn.getBorderColor() + " Center: " + btn.getCenterColor());
                 tableRow.addView(btn);
             }
             grid.addView(tableRow, new TableLayout.LayoutParams(gridSize, gridSize/(colors.size()*lines)));
@@ -88,17 +94,19 @@ public class BoardFragment extends Fragment {
 
     public BorderColor randomBorder() {
         int i = (int) (borders.size()*Math.random());
+        Log.d("RANDOM", "BORDER: " + borders.get(i) + " ROWS: " + borders.get(i).getRows());
         return borders.get(i);
     }
     public CenterColor randomCenter() {
         int i = (int) (centers.size()*Math.random());
+        Log.d("RANDOM", "CENTER: " + centers.get(i) + " COLS: " + centers.get(i).getCols());
         return centers.get(i);
     }
 
     private void setRandomAppearance(TileButton btn) {
         BorderColor border = randomBorder();
         CenterColor center = randomCenter();
-        GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[] {center.getColor(), center.getColor()});
+        GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.TL_BR, new int[] {Color.WHITE, center.getColor()});
         gd.setStroke(5, border.getColor());
         btn.setBackground(gd);
     }
@@ -107,11 +115,8 @@ public class BoardFragment extends Fragment {
         TileButton btn = new TileButton(getActivity());
         BorderColor border = randomBorder();
         CenterColor center = randomCenter();
-        GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.TL_BR, new int[] {Color.WHITE, center.getColor(), Color.WHITE,});
-//        gd.setGradientType(GradientDrawable.RADIAL_GRADIENT);
-//        gd.setGradientRadius((float)1.2);
-        gd.setStroke(15, border.getColor());
-        btn.setBackground(gd);
+
+        btn.setAppearance(border, center);
         return btn;
     }
 
@@ -174,5 +179,47 @@ public class BoardFragment extends Fragment {
 
     public void setColors(ArrayList<ColorChoice> colors) {
         this.colors = colors;
+    }
+    private final class MyTouchListener implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+                view.startDrag(data, shadowBuilder, view, 0);
+                view.setVisibility(View.INVISIBLE);
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    class MyDragListener implements View.OnDragListener {
+
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            int action = event.getAction();
+            TileButton tb = (TileButton)v;
+            switch (event.getAction()) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    // Do nothing
+                    break;
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    tb.changeAppearance(new BorderColor(Color.BLACK), new CenterColor(Color.BLACK));
+                    break;
+                case DragEvent.ACTION_DRAG_EXITED:
+                    tb.setAppearance();
+                    break;
+                case DragEvent.ACTION_DROP:
+                    // Dropped, reassign View to ViewGroup
+
+                    break;
+                case DragEvent.ACTION_DRAG_ENDED:
+                    tb.setAppearance();
+                default:
+                    break;
+            }
+            return true;
+        }
     }
 }

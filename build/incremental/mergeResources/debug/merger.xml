@@ -14,13 +14,63 @@
                 qualifiers=""
                 type="menu" />
             <file
+                name="create"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/menu/create.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="line_choice"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/menu/line_choice.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="tile"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/drawable-hdpi/tile.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/home/tony/workspace/StileProject/Stile/src/main/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="fragment_grid_set"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_grid_set.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_start"
                 path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/activity_start.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_lines_set"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_lines_set.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_line_choice"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_line_choice.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_color_choice"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_color_choice.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_create"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/activity_create.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_board"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_board.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_set_lines"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_set_lines.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -104,56 +154,6 @@
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
-            <file
-                name="line_choice"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/menu/line_choice.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="fragment_color_choice"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_color_choice.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="activity_create"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/activity_create.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="fragment_line_choice"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_line_choice.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="create"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/menu/create.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="fragment_set_lines"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_set_lines.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="fragment_lines_set"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_lines_set.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="fragment_grid_set"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_grid_set.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="tile"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/drawable-hdpi/tile.xml"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="fragment_board"
-                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_board.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="/home/tony/workspace/StileProject/Stile/build/res/rs/debug" />
     </dataSet>
