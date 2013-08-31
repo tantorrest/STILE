@@ -13,4 +13,8 @@ public interface ChoiceCallbacks {
     public void create();
 
     void generateBoard(ArrayList<BorderColor> borders, ArrayList<CenterColor> centers);
+
+    void removeColor(int id);
+
+    public ArrayList<ColorChoice> getColors();
 }

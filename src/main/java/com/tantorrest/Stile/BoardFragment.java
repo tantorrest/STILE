@@ -199,7 +199,13 @@ public class BoardFragment extends Fragment {
         @Override
         public boolean onDrag(View v, DragEvent event) {
             int action = event.getAction();
+            TileButton draggedTb = (TileButton) event.getLocalState();
+            BorderColor dragBC = draggedTb.getBorderColor();
+            CenterColor dragCC = draggedTb.getCenterColor();
             TileButton tb = (TileButton)v;
+            BorderColor bc = tb.getBorderColor();
+            CenterColor cc = tb.getCenterColor();
+            ViewGroup group = (ViewGroup) draggedTb.getParent();
             switch (event.getAction()) {
                 case DragEvent.ACTION_DRAG_STARTED:
                     // Do nothing
@@ -212,10 +218,29 @@ public class BoardFragment extends Fragment {
                     break;
                 case DragEvent.ACTION_DROP:
                     // Dropped, reassign View to ViewGroup
-
+                    if (dragBC.getColor() == cc.getColor() && dragCC.getColor() == bc.getColor()) {
+                        tb.setVisibility(View.INVISIBLE);
+                        tb.setAppearance(new BorderColor(Color.TRANSPARENT), new CenterColor(Color.TRANSPARENT));
+                        draggedTb.setVisibility(View.INVISIBLE);
+                        draggedTb.setAppearance(new BorderColor(Color.TRANSPARENT), new CenterColor(Color.TRANSPARENT));
+                    }
+                    else if (dragBC.getColor() == cc.getColor()){
+                        tb.setAppearance(bc, dragCC);
+                        draggedTb.setVisibility(View.INVISIBLE);
+                        draggedTb.setAppearance(new BorderColor(Color.TRANSPARENT), new CenterColor(Color.TRANSPARENT));
+                    }
+                    else if (dragCC.getColor() == bc.getColor()){
+                        tb.setAppearance(dragBC, cc);
+                        draggedTb.setVisibility(View.INVISIBLE);
+                        draggedTb.setAppearance(new BorderColor(Color.TRANSPARENT), new CenterColor(Color.TRANSPARENT));
+                    }
+                    else {
+                        draggedTb.setVisibility(View.VISIBLE);
+                    }
                     break;
                 case DragEvent.ACTION_DRAG_ENDED:
                     tb.setAppearance();
+                    break;
                 default:
                     break;
             }

@@ -113,9 +113,9 @@
                 qualifiers="" >
                 <string name="border_colors" >Border Colors:
                 </string>
-                <string name="title_activity_line_choice_fragment" >LineChoiceFragment
-                </string>
                 <string name="action_settings" >Settings
+                </string>
+                <string name="title_activity_line_choice_fragment" >LineChoiceFragment
                 </string>
                 <string name="app_name" >Stile
                 </string>
@@ -154,6 +154,16 @@
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="color_bar"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/color_bar.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_color_bar_choice"
+                path="/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_color_bar_choice.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/home/tony/workspace/StileProject/Stile/build/res/rs/debug" />
     </dataSet>

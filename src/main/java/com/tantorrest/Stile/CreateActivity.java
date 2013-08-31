@@ -4,6 +4,7 @@ package com.tantorrest.Stile;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 
 import java.util.ArrayList;
@@ -77,6 +78,26 @@ public class CreateActivity extends Activity implements ChoiceCallbacks {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.choice_containter, frag).addToBackStack(null).commit();
 
+    }
+
+    @Override
+    public void removeColor(int id) {
+        Log.d("REMOVE COLORS", "COLORS BEFORE: " + colors);
+        for (int i = 0; i<colors.size(); i++) {
+            ColorChoice color = colors.get(i);
+            if (color.getColor() == id) {
+                borderColors.remove(i);
+                centerColors.remove(i);
+                colors.remove(i);
+                Log.d("REMOVE COLORS", "COLORS BEFORE: " + colors);
+                return;
+            }
+        }
+    }
+
+    @Override
+    public ArrayList<ColorChoice> getColors() {
+        return colors;
     }
 
     public void setBorderColors(ArrayList<BorderColor> borderColors) {

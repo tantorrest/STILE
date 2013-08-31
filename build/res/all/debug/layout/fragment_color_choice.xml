@@ -66,13 +66,5 @@
             android:layout_below="@+id/yellow"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="23dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PICK COLORS"
-        android:id="@+id/pick"
-        android:layout_below="@+id/next"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"/>
 </RelativeLayout>
 <!-- From: file:/home/tony/workspace/StileProject/Stile/src/main/res/layout/fragment_color_choice.xml -->
